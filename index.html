@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio - Matías Mollica</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Sora:wght@100..800&family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.13.0/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/lenis@1.0.0/dist/lenis.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body data-bs-spy="scroll" data-bs-target="navbar">
+    <div id="preloader">
+        <div class="preloader-bar"></div>
+    </div>
+    <div class="cursor"></div>
+    <a href="https://wa.me/+59893847855" class="whatsapp-icon" target="_blank" title="Contactarme por Whatsapp">
+    <i class="fab fa-whatsapp"></i>
+    </a>
+    <nav id="navbar" class="navbar navbar-expand-lg navbar-dark fixed-top">
+        <div class="container">
+            <a class="navbar-brand fw-bold" href="#">Matías Mollica</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navContent">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navContent">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="#hero">Inicio</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#about">Sobre mí</a></li>
+                    <li class="nav-item"><a class="nav-link" href="projects.html">Proyectos</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#services">Servicios</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#contact">Contacto</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <section id="hero" class="vh-100 d-flex align-items-center text-white">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-6">
+                    <h1 class="display-3 sora-titulohero">Matías Mollica</h1>
+                    <p class="lead mt-3 work-subtitulo">Frontend Developer con foco en <span class="highlight">Comunicación Visual</span></p>
+                    <a href="#contact" class="btn btn-lg btn-outline-light rounded-pill px-4">
+                    Contactarme
+                    </a>
+                </div>
+                <div class="col-lg-6 text-center">
+                    <div class="hero-img placeholder bg-secondary"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <section id="about" class="py-5 section-gradient grad-about position-relative overflow-hidden">
+        <div class="about-parallax">
+            <div class="circle" data-speed="0.5"></div>
+            <div class="circle" data-speed="1.2"></div>
+            <div class="circle" data-speed="0.8"></div>
+            <div class="circle" data-speed="1.8"></div>
+            <div class="circle" data-speed="1.0"></div>
+            <div class="circle" data-speed="0.6"></div>
+            <div class="circle" data-speed="0.5"></div>
+            <div class="circle" data-speed="1.2"></div>
+            <div class="circle" data-speed="0.8"></div>
+            <div class="circle" data-speed="2.8"></div>
+            <div class="circle" data-speed="1.0"></div>
+            <div class="circle" data-speed="0.6"></div>
+            <div class="circle" data-speed="0.6"></div>
+        </div>
+        <div class="container position-relative">
+            <div class="row">
+                <div class="row align-items-center">
+                    <div class="col-lg-6 mb-4">
+                        <h2 class="display-5 fw-bold text-light mb-5">Sobre mí</h2>
+                        <p>
+                            Soy Matías, un desarrollador frontend uruguayo con especial énfasis en crear webs y diseños que generen impacto.
+                            Mis proyectos siempre están guiados por un concepto base y todas las decisiones tienen un porqué.<br><br>
+                            En cada trabajo, sin importar si se trata de desarrollo web, branding o diseño gráfico, tengo el objetivo de
+                            comunicar mostrando la identidad que hay detrás de lo que se ve, cada proyecto se transforma en una experiencia.
+                        </p>
+                    </div>
+                    <div class="col-lg-5 offset-lg-1 mb-4 d-flex flex-column align-items-start">
+                        <div class="experience-box d-flex align-items-center mb-4">
+                            <i class="fas fa-code experience-icon"></i>
+                            <p class="mb-0 ms-3">
+                            Más de <strong>1 año</strong> de experiencia como <br>
+                            <span class="fw-bold">Frontend Developer</span> y trabajando en <span class="fw-bold">diseño gráfico</span>.
+                            </p>
+                        </div>
+                        <a href="./assets/certificados.zip" download class="btn btn-gradient mt-4">
+                            <i class="fas fa-download me-2"></i> Ver certificaciones
+                        </a>
+                    </div>
+            </div>
+                <h2 class="display-5 fw-bold text-light mb-5 mt-5">
+                    Tecnologías que utilizo
+                </h2>
+
+                <!-- Programación -->
+                <h3 class="mb-4 fw-bold tituloprogramacion">Programación</h3>
+                <div class="groupcards">
+                    <div class="tech-card">
+                        <span class="tech-name">HTML</span>
+                        <img src="./assets/HTML.png" alt="HTML Logo" class="tech-logo">
+                    </div>
+                    <div class="tech-card">
+                        <span class="tech-name">CSS</span>
+                        <img src="./assets/CSS.svg" alt="CSS Logo" class="tech-logo">
+                    </div>
+                    <div class="tech-card">
+                        <span class="tech-name">JavaScript</span>
+                        <img src="./assets/JS.svg" alt="JS Logo" class="tech-logo">
+                    </div>
+                    <div class="tech-card">
+                        <span class="tech-name">React</span>
+                        <img src="./assets/React.svg" alt="React Logo" class="tech-logo">
+                    </div>
+                    <div class="tech-card">
+                        <span class="tech-name">WordPress</span>
+                        <img src="./assets/Wordpress.svg" alt="WordPress Logo" class="tech-logo">
+                    </div>
+                    <div class="tech-card">
+                        <span class="tech-name">Bootstrap</span>
+                        <img src="./assets/Bootstrap.png" alt="Bootstrap Logo" class="tech-logo">
+                    </div>
+                    <div class="tech-card">
+                        <span class="tech-name">Sass</span>
+                        <img src="./assets/SASS.svg" alt="Sass Logo" class="tech-logo">
+                    </div>
+                </div>
+                <h4 class="mt-5 mb-4 fw-bold tituloexp">Animación y Efectos</h4>
+                <div class="groupcards">
+                    <div class="tech-card">
+                        <span class="tech-name">GSAP</span>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="200" fill="none" viewBox="0 0 82 30" alt="GSAP Logo" class="tech-logo">
+                            <path fill="#FFFCE1" d="M23.81 14.013v.013l-1.075 4.665c-.058.264-.322.458-.626.458H20.81a.218.218 0 0 0-.208.155c-1.198 4.064-2.82 6.858-4.962 8.535-1.822 1.428-4.068 2.093-7.069 2.093-2.696 0-4.514-.867-6.056-2.578C.478 25.09-.364 21.388.146 16.926 1.065 8.549 5.41.096 13.776.096c2.545-.023 4.543.762 5.933 2.33 1.47 1.657 2.216 4.154 2.22 7.421a.55.55 0 0 1-.549.536h-6.13a.42.42 0 0 1-.407-.41c-.05-2.259-.72-3.36-2.052-3.36-2.35 0-3.736 3.19-4.471 4.959-1.027 2.47-1.55 5.152-1.447 7.824.049 1.244.249 2.994 1.43 3.718 1.047.643 2.541.217 3.446-.495.904-.711 1.632-1.942 1.938-3.065.043-.156.046-.277.005-.332-.043-.055-.162-.068-.253-.068h-1.574a.572.572 0 0 1-.438-.202.42.42 0 0 1-.087-.362l1.076-4.674c.053-.24.27-.42.537-.453v-.011h10.33c.024 0 .049 0 .072.005.268.034.457.284.452.556h.002Z"/>
+                            <path fill="#FFFCE1" d="M41.594 8.65a.548.548 0 0 1-.548.531H35.4c-.37 0-.679-.3-.679-.665 0-1.648-.57-2.45-1.736-2.45s-1.918.717-1.94 1.968c-.025 1.395.764 2.662 3.01 4.84 2.957 2.774 4.142 5.232 4.085 8.48C38.047 26.605 34.476 30 29.042 30c-2.775 0-4.895-.743-6.305-2.207-1.431-1.486-2.087-3.668-1.95-6.485a.548.548 0 0 1 .549-.53h5.84a.55.55 0 0 1 .422.209.48.48 0 0 1 .106.384c-.065 1.016.112 1.775.512 2.195.256.272.613.41 1.058.41 1.079 0 1.711-.763 1.735-2.09.02-1.148-.343-2.155-2.321-4.19-2.555-2.496-4.846-5.075-4.775-9.13.042-2.351.976-4.502 2.631-6.056C28.294.868 30.687 0 33.465 0c2.783.02 4.892.813 6.269 2.359 1.304 1.466 1.932 3.582 1.862 6.29h-.002Z"/>
+                            <path fill="#FFFCE1" d="m59.096 29.012.037-27.932a.525.525 0 0 0-.529-.533h-8.738c-.294 0-.423.252-.507.42L36.707 28.842v.005l-.005.006c-.14.343.126.71.497.71h6.108c.33 0 .548-.1.656-.308l1.213-2.915c.149-.388.177-.424.601-.424h5.836c.406 0 .415.008.408.405l-.131 2.71a.525.525 0 0 0 .529.532h6.17a.522.522 0 0 0 .403-.182.458.458 0 0 0 .104-.369Zm-10.81-9.326c-.057 0-.102-.001-.138-.005a.146.146 0 0 1-.13-.183c.012-.041.029-.095.053-.163l4.377-10.827c.038-.107.086-.212.136-.314.071-.145.157-.155.184-.047.023.09-.502 11.118-.502 11.118-.041.413-.06.43-.467.464l-3.509-.041h-.008l.003-.002Z"/>
+                            <path fill="#FFFCE1" d="M71.545.547h-4.639c-.245 0-.52.13-.585.422l-6.455 28.029a.423.423 0 0 0 .088.364.572.572 0 0 0 .437.202h5.798c.311 0 .525-.153.583-.418 0 0 .703-3.168.704-3.178.05-.247-.036-.439-.258-.555-.105-.054-.209-.108-.312-.163l-1.005-.522-1-.522-.387-.201a.186.186 0 0 1-.102-.17.199.199 0 0 1 .198-.194l3.178.014c.95.005 1.901-.062 2.836-.234 6.58-1.215 10.95-6.485 11.076-13.656.107-6.12-3.309-9.221-10.15-9.221l-.005.003Zm-1.579 16.68h-.124c-.278 0-.328-.03-.337-.04-.004-.007 1.833-8.073 1.834-8.084.047-.233.045-.367-.099-.446-.184-.102-2.866-1.516-2.866-1.516a.188.188 0 0 1-.101-.172.197.197 0 0 1 .197-.192h4.241c1.32.04 2.056 1.221 2.021 3.237-.061 3.492-1.721 7.09-4.766 7.214Z"/>
+                        </svg>  
+                    </div>
+                    <div class="tech-card">
+                        <span class="tech-name">Lenis</span>
+                        <h2  alt="Lenis Logo" class="tech-logo">Lenis</h2>
+                    </div>
+                </div>
+                <h3 class="mt-5 mb-4 fw-bold titulodiseño">Diseño gráfico</h3>
+                <div class="groupcards">
+                    <div class="tech-card">
+                        <span class="tech-name">Illustrator</span>
+                        <img src="./assets/Illustrator.png" alt="Illustrator Logo" class="tech-logo">
+                    </div>
+                    <div class="tech-card">
+                        <span class="tech-name">Photoshop</span>
+                        <img src="./assets/Photoshop.png" alt="Photoshop Logo" class="tech-logo">
+                    </div>
+                    <div class="tech-card">
+                        <span class="tech-name">Figma</span>
+                        <img src="./assets/Figma.png" alt="Figma Logo" class="tech-logo">
+                    </div>
+                </div>
+        </div>    
+    </section>
+
+    <!-- Sección Proyectos en el Home -->
+    <section id="proyectos-home" class="container-fluid py-5 section-gradient grad-proyectos">
+        <div class="video-bg-wrapper">
+            <video autoplay muted loop playsinline id="video-proyectos">
+                <source src="./assets/fondoproyectoshome.mp4" type="video/mp4">
+            </video>
+        </div>
+        <div class="row align-items-center">
+            <!-- Columna Izquierda -->
+            <div class="col-lg-6">
+                <h2 class="display-5 fw-bold text-light mb-3">
+                    Mis Proyectos
+                </h2>
+                <p class="lead text-secondary mb-4">
+                    Una selección de los trabajos que fusionan programación, diseño y experiencias interactivas.  
+                </p>
+                <a href="projects.html" class="btn btn-lg btn-outline-light rounded-pill px-4">
+                    Ver proyectos →
+                </a>
+            </div>
+            <div class="col-lg-6 d-flex justify-content-center align-items-center" id="animacion-proyectos">
+                <!-- Aquí más adelante va tu animación -->
+            </div>
+        </div>
+    </section>
+
+    <section id="services" class="py-5 section-gradient grad-services">
+        <div class="container-fluid px-0">
+            <h2 class="display-5 fw-bold text-light mb-5 tituloservicios">
+                Servicios
+            </h2>
+
+            <div class="service-rect" data-info="Desarrollo de sitios web modernos, rápidos y optimizados.">
+                <span class="service-title">Desarrollo web</span>
+                <span class="service-desc"></span>
+            </div>
+
+            <div class="service-rect" data-info="Interfaces centradas en el usuario con foco en usabilidad y estética.">
+                <span class="service-title">Diseño UX/UI</span>
+                <span class="service-desc"></span>
+            </div>
+
+            <div class="service-rect" data-info="Webs administrables y personalizadas a medida con WordPress.">
+                <span class="service-title">WordPress</span>
+                <span class="service-desc"></span>
+            </div>
+
+            <div class="service-rect" data-info="Diseños crativos y cartelería que comunica de manera potente para reforzar tu idea.">
+                <span class="service-title">Diseño gráfico</span>
+                <span class="service-desc"></span>
+            </div>
+
+            <div class="service-rect" data-info="Construcción de identidad visual por medio de manual de marca, logos y comunicación de una marca sólida y coherente.">
+                <span class="service-title">Branding</span>
+                <span class="service-desc"></span>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="contact-section">
+        <div class="contact-content">
+            <div class="contact-info">
+                <p class="contact-quote">"Transformando ideas en soluciones digitales"</p>
+                <div class="contact-buttons">
+                    <a href="./assets/Curriculum_MatíasMollica.pdf" class="contact-btn contact-btn-cv" download>
+                        <i class="fas fa-file-pdf"></i>Descargar Curriculum
+                    </a>
+                    <a href="https://www.linkedin.com/in/mat%C3%ADas-mollica-pesce-541a4522b?lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_view_base_contact_details%3BrqylTqVkTqmhrI00zMz6xg%3D%3D" class="contact-btn contact-btn-linkedin" target="_blank">
+                        <i class="fab fa-linkedin"></i>LinkedIn
+                    </a>
+                </div>
+            </div>
+
+            <div class="contact-form-container">
+                <form id="contactForm" class="contact-form">
+                    <h2 class="contact-form-title">Contacto</h2>
+                    <p class="contact-form-subtitle">¿Alguna idea o proyecto? Ponete en contacto</p>
+                    <div class="contact-form-fields">
+                        <div class="contact-form-field"> 
+                            <label for="name">Nombre</label>
+                            <input type="text" id="name" name="name" required>
+                        </div>
+                        <div class="contact-form-field">
+                            <label for="email">Correo</label>
+                            <input type="email" id="email" name="email" required>
+                        </div>
+                        <div class="contact-form-field">
+                            <label for="message">Mensaje</label>
+                            <textarea id="message" name="message" rows="4" required></textarea>
+                        </div>
+                        <button type="submit" class="contact-form-btn">Enviar mensaje</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </section>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@studio-freight/lenis@1.0.32/dist/lenis.min.js"></script>
+<script src="script.js"></script>
+<script>
+const form = document.getElementById('contactForm');
+
+form.addEventListener('submit', async (e) => {
+    e.preventDefault();
+
+    const data = {
+        name: form.name.value,
+        email: form.email.value,
+        message: form.message.value
+    };
+
+    try {
+        const res = await fetch('http://localhost:3000/send', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify(data)
+        });
+
+        const result = await res.json();
+
+        if(result.success){
+            alert('Mensaje enviado correctamente!');
+            form.reset();
+        } else {
+            alert('Error al enviar mensaje, intenta más tarde.');
+        }
+    } catch (error) {
+        alert('Error al enviar mensaje, intenta más tarde.');
+        console.error(error);
+    }
+});
+</script>
+</body>
+</html>

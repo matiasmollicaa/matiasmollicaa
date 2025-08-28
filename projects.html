@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Proyectos - Molleja Portfolio</title>
+<link rel="stylesheet" href="projects.css">
+<script src="https://cdn.tailwindcss.com"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.13.0/gsap.min.js"></script>
+</head>
+<body>
+
+    <!-- Botón volver arriba -->
+    <div class="p-6">
+        <a href="index.html" class="inline-block text-xl font-bold border-2 border-white px-6 py-3 rounded hover:bg-white hover:text-black transition">← Volver</a>
+    </div>
+
+    <!-- Título -->
+    <div class="text-center my-12">
+        <h1 class="text-6xl font-bold mb-4">Proyectos</h1>
+        <p class="text-gray-400 text-lg">Explorá los proyectos que he desarrollado en distintas áreas</p>
+    </div>
+
+    <!-- Botones de categorías -->
+    <div class="flex justify-center gap-6 mb-12 flex-wrap">
+        <button class="category-btn" data-category="web">Desarrollo Web</button>
+        <button class="category-btn1" data-category="graphic">Diseño Gráfico</button>
+        <button class="category-btn2" data-category="branding">Branding</button>
+    </div>
+
+    <!-- Carrusel -->
+    <div class="carousel-container mx-auto max-w-6xl relative">
+        <button class="arrow-btn arrow-left">◀</button>
+        <div class="carousel-track">
+            <!-- Cards -->
+            <div class="card" data-category="web">
+                <a href="https://soyde.org/" target="_blank">
+                    <img src="./assets/soyde.jpg" alt="Proyecto Web 1">
+                    <div class="card-content">
+                        <h3 class="font-bold text-xl">SoyDe</h3>
+                        <p class="text-gray-300">Front de app SoyDe - Insignias digitales</p>
+                    </div>
+                </a>
+            </div>
+            <div class="card" data-category="web">
+                <a href="https://puzlegroup.com/" target="_blank">
+                    <img src="./assets/puzle.jpg" alt="Proyecto Web 2">
+                    <div class="card-content">
+                        <h3 class="font-bold text-xl">Puzle</h3>
+                        <p class="text-gray-300">Diseño y creación de la web de Puzle Group con Wordpress</p>
+                    </div>
+                </a>
+            </div>
+            <div class="card" data-category="graphic">
+                <a href="./assets/BrouchurePuzle.pdf" target="_blank">
+                    <!-- Imagen previa del PDF -->
+                    <img src="./assets/miniaturabrochupuzle.jpg" alt="Diseño Gráfico PDF">
+                    <div class="card-content">
+                        <h3 class="font-bold text-xl">Brochure Puzle Group</h3>
+                        <p class="text-gray-300">Diseño e ideación de brochure corporativo</p>
+                    </div>
+                </a>
+            </div>
+            <div class="card" data-category="graphic">
+                <a href="./assets/Banner1StandAntelArena-Puzle.pdf" target="_blank">
+                    <!-- Imagen previa del PDF -->
+                    <img src="./assets/miniaturabanner1puzle.jpg" alt="Diseño Gráfico PDF">
+                    <div class="card-content">
+                        <h3 class="font-bold text-xl">Diseño de Banner para Puzle Group</h3>
+                        <p class="text-gray-300">Banner expuesto en Antel Arena, Montevideo</p>
+                    </div>
+                </a>
+            </div>
+            <div class="card" data-category="graphic">
+                <a href="./assets/CenefaStandAntelArena.pdf" target="_blank">
+                    <!-- Imagen previa del PDF -->
+                    <img src="./assets/miniaturacenefapuzle.jpg" alt="Diseño Gráfico PDF">
+                    <div class="card-content">
+                        <h3 class="font-bold text-xl">Diseño de banner superior para Puzle Group</h3>
+                        <p class="text-gray-300">Banner superior expuesto en Antel Arena, Montevideo</p>
+                    </div>
+                </a>
+            </div>
+            <div class="card" data-category="graphic">
+                <a href="./assets/Banner2StandAntelArena-Phishing.pdf" target="_blank">
+                    <!-- Imagen previa del PDF -->
+                    <img src="./assets/miniaturabanner1phishing.jpg" alt="Diseño Gráfico PDF">
+                    <div class="card-content">
+                        <h3 class="font-bold text-xl">Diseño de Banner para AccessDev</h3>
+                        <p class="text-gray-300">Banner expuesto en Antel Arena, Montevideo</p> 
+                    </div>
+                </a>
+            </div>
+            <div class="card" data-category="graphic">
+                <a href="./assets/FolletoPuzleFinal.pdf" target="_blank">
+                    <!-- Imagen previa del PDF -->
+                    <img src="./assets/miniaturafolletopuzle.jpg" alt="Diseño Gráfico PDF">
+                    <div class="card-content">
+                        <h3 class="font-bold text-xl">Diseño de folleto para Puzle Group</h3>
+                        <p class="text-gray-300">Diseño e ideación de folleto corporativo</p>
+                    </div>
+                </a>
+            </div>
+            <div class="card" data-category="graphic">
+                <a href="./assets/Brochure_SoyDe.pdf" target="_blank">
+                    <!-- Imagen previa del PDF -->
+                    <img src="./assets/miniaturabrochuresoyde.jpg" alt="Diseño Gráfico PDF">
+                    <div class="card-content">
+                        <h3 class="font-bold text-xl">Brochure SoyDe</h3>
+                        <p class="text-gray-300">Diseño e ideación de brochure corporativo</p>
+                    </div>
+                </a>
+            </div>
+            <div class="card" data-category="branding">
+                <a href="./assets/manualdemarca_Mollica.pdf" target="_blank">
+                    <img src="./assets/miniaturamanualdemarcamollica.jpg" alt="Diseñobranding">
+                    <div class="card-content">
+                        <h3 class="font-bold text-xl">Manual de mi marca personal</h3>
+                        <p class="text-gray-300">Diseño de manual de marca</p>
+                    </div>
+                </a>
+            </div>
+            <div class="card" data-category="branding">
+                <a href="./assets/ManualdeMarca_Olows.pdf" target="_blank">
+                    <img src="./assets/miniaturamanualdemarcaolows.jpg" alt="Diseñobranding">
+                    <div class="card-content">
+                        <h3 class="font-bold text-xl">Manual de marca para Olows</h3>
+                        <p class="text-gray-300">Diseño de manual de marca corporativo</p>
+                    </div>
+                </a>
+            </div>
+            <div class="card" data-category="branding">
+                <a href="./assets/Identidaddemarca-SoyDe.pdf" target="_blank">
+                    <img src="./assets/miniaturamanualdemarcasoyde.jpg" alt="Diseñobranding">
+                    <div class="card-content">
+                        <h3 class="font-bold text-xl">Manual de mi marca para SoyDe</h3>
+                        <p class="text-gray-300">Diseño de manual de marca corporativo</p>
+                    </div>
+                </a>
+            </div>
+            <div class="card" data-category="branding">
+                <img src="./assets/LogoSoyDe.png" alt="Diseño branding" style="width:150px; height:auto; margin:auto; margin-top: 2rem;">
+                <div class="card-content">
+                    <h3 class="font-bold text-xl">Diseño de logo</h3>
+                    <p class="text-gray-300">Diseño de logo para SoyDe</p>
+                </div>
+            </div>
+            <div class="card" data-category="branding">
+                <img src="./assets/LogoPhishing.png" alt="Diseño branding" style="width:150px; height:auto; margin:auto; margin-top: 2rem;">
+                <div class="card-content">
+                    <h3 class="font-bold text-xl">Diseño de logo</h3>
+                    <p class="text-gray-300">Diseño de logo para AccessDev - Ethical Phishing</p>
+                </div>
+            </div>
+            <div class="card" data-category="branding">
+                <img src="./assets/logourufiltros.png" alt="Diseño branding" style="width:150px; height:auto; margin:auto; margin-top: 2rem;">
+                <div class="card-content">
+                    <h3 class="font-bold text-xl">Diseño de logo</h3>
+                    <p class="text-gray-300">Diseño de logo para Urufiltros</p>
+                </div>
+            </div>
+        </div>
+        <button class="arrow-btn arrow-right">▶</button>
+    </div>
+
+    <!-- Botón volver abajo -->
+    <div class="p-6 text-center">
+        <a href="index.html" class="inline-block text-xl font-bold border-2 border-white px-6 py-3 rounded hover:bg-white hover:text-black transition">← Volver</a>
+    </div>
+
+    <script>
+        const track = document.querySelector('.carousel-track');
+        const cards = Array.from(document.querySelectorAll('.card'));
+        const leftBtn = document.querySelector('.arrow-left');
+        const rightBtn = document.querySelector('.arrow-right');
+        const categoryBtns = document.querySelectorAll('.category-btn, .category-btn1, .category-btn2');
+        let currentIndex = 0;
+        let visibleCards = cards.slice();
+
+        // Función para obtener el ancho de desplazamiento según el tamaño de pantalla
+        function getCardWidth() {
+            if(window.innerWidth < 768){
+                return 250; // mobile: ancho de card
+            } else if(window.innerWidth < 992){
+                return 300;
+            } else if(window.innerWidth < 1200){
+                return 350;
+            } else {
+                return 400;
+            }
+        }
+
+        function updateVisibleCards(category = 'all') {
+            const oldCards = visibleCards;
+            visibleCards = cards.filter(c => category === 'all' || c.dataset.category === category);
+
+            const leavingCards = oldCards.filter(c => !visibleCards.includes(c));
+            if(leavingCards.length) {
+                gsap.to(leavingCards, {
+                    x: -500, opacity: 0, stagger: 0.05, duration: 0.4,
+                    onComplete: () => leavingCards.forEach(c => c.style.display = 'none')
+                });
+            }
+
+            visibleCards.forEach(c => {
+                c.style.display = 'block';
+                gsap.set(c, {x: 500, opacity: 0});
+            });
+
+            gsap.to(visibleCards, {
+                x: 0, opacity: 1, duration: 0.6, stagger: 0.1, ease: "power3.out"
+            });
+
+            currentIndex = 0;
+            track.style.transform = 'translateX(0)';
+        }
+
+        categoryBtns.forEach(btn => {
+            btn.addEventListener('click', () => updateVisibleCards(btn.dataset.category));
+        });
+
+        leftBtn.addEventListener('click', () => {
+            if(currentIndex > 0){
+                currentIndex--;
+                gsap.to(track, {x: -currentIndex * getCardWidth(), duration: 0.5, ease: "power2.out"});
+            }
+        });
+
+        rightBtn.addEventListener('click', () => {
+            if(currentIndex < visibleCards.length - 1){
+                currentIndex++;
+                gsap.to(track, {x: -currentIndex * getCardWidth(), duration: 0.5, ease: "power2.out"});
+            }
+        });
+
+        // Actualizar al cambiar el tamaño de pantalla
+        window.addEventListener('resize', () => {
+            gsap.to(track, {x: -currentIndex * getCardWidth(), duration: 0.3});
+        });
+
+        updateVisibleCards('all');
+    </script>
+
+</body>
+</html>
