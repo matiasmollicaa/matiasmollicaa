@@ -1,38 +1,57 @@
-require('dotenv').config();
-const sgMail = require('@sendgrid/mail');
-sgMail.setApiKey(process.env.SENDGRID_API_KEY);
-
+require('dotenv').config(); // carga variables de entorno
 const express = require('express');
 const bodyParser = require('body-parser');
 const cors = require('cors');
-const sgMail = require('@sendgrid/mail');
+const axios = require('axios');
 
 const app = express();
+
+// Middlewares
 app.use(cors());
 app.use(bodyParser.json());
 
-sgMail.setApiKey('TU_API_KEY_DE_SENDGRID'); // <- pon tu API key aquí
+// Tu API Key de Brevo desde el .env
+const BREVO_API_KEY = process.env.BREVO_API_KEY;
 
+// Ruta para recibir el formulario
 app.post('/send', async (req, res) => {
     const { name, email, message } = req.body;
 
-    const msg = {
-        to: 'tucorreo@protonmail.com', // <- tu correo
-        from: 'noreply@tudominio.com', // <- debe estar verificado en SendGrid
-        subject: `Nuevo mensaje de ${name}`,
-        text: `Nombre: ${name}\nEmail: ${email}\nMensaje: ${message}`,
-        html: `<p><strong>Nombre:</strong> ${name}</p>
-                <p><strong>Email:</strong> ${email}</p>
-                <p><strong>Mensaje:</strong> ${message}</p>`,
-    };
+    if (!name || !email || !message) {
+        return res.status(400).json({ success: false, message: 'Todos los campos son obligatorios' });
+    }
 
     try {
-        await sgMail.send(msg);
+        // Enviar email usando Brevo (Sendinblue)
+        const response = await axios.post(
+            'https://api.brevo.com/v3/smtp/email',
+            {
+                sender: { name: 'Matías', email: 'noreply@https://matiasmollicaa.github.io/matiasmollicaa/' }, // debe estar verificado en Brevo
+                to: [{ email: 'matiasmollica99@gmail.com', name: 'Matías' }],
+                subject: `Nuevo mensaje de ${name}`,
+                htmlContent: `
+                    <p><strong>Nombre:</strong> ${name}</p>
+                    <p><strong>Email:</strong> ${email}</p>
+                    <p><strong>Mensaje:</strong><br>${message}</p>
+                `
+            },
+            {
+                headers: {
+                    'api-key': BREVO_API_KEY,
+                    'Content-Type': 'application/json',
+                    'Accept': 'application/json'
+                }
+            }
+        );
+
         res.status(200).json({ success: true, message: 'Correo enviado correctamente' });
+
     } catch (error) {
-        console.error(error);
+        console.error('Error enviando el correo:', error.response?.data || error.message);
         res.status(500).json({ success: false, message: 'Error al enviar el correo' });
     }
 });
 
-app.listen(3000, () => console.log('Servidor escuchando en puerto 3000'));
+// Arrancar servidor
+const PORT = process.env.PORT || 3000;
+app.listen(PORT, () => console.log(`Servidor escuchando en puerto ${PORT}`));

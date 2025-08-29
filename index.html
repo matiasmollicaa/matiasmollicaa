@@ -89,7 +89,7 @@
                         <div class="experience-box d-flex align-items-center mb-4">
                             <i class="fas fa-code experience-icon"></i>
                             <p class="mb-0 ms-3">
-                            Más de <strong>1 año</strong> de experiencia como <br>
+                            Más de <strong>2 años</strong> de experiencia como <br>
                             <span class="fw-bold">Frontend Developer</span> y trabajando en <span class="fw-bold">diseño gráfico</span>.
                             </p>
                         </div>
@@ -242,6 +242,7 @@
             </div>
 
             <div class="contact-form-container">
+                <div id="formMessage" class="form-message"></div>
                 <form id="contactForm" class="contact-form">
                     <h2 class="contact-form-title">Contacto</h2>
                     <p class="contact-form-subtitle">¿Alguna idea o proyecto? Ponete en contacto</p>
@@ -271,6 +272,7 @@
 <script src="script.js"></script>
 <script>
 const form = document.getElementById('contactForm');
+const formMessage = document.getElementById('formMessage');
 
 form.addEventListener('submit', async (e) => {
     e.preventDefault();
@@ -282,7 +284,7 @@ form.addEventListener('submit', async (e) => {
     };
 
     try {
-        const res = await fetch('http://localhost:3000/send', {
+        const res = await fetch('https://matiasmollicaa.github.io/matiasmollicaa/send', {
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify(data)
@@ -291,15 +293,27 @@ form.addEventListener('submit', async (e) => {
         const result = await res.json();
 
         if(result.success){
-            alert('Mensaje enviado correctamente!');
+            formMessage.textContent = 'Mensaje enviado correctamente!';
+            formMessage.className = 'form-message success';
+            formMessage.style.display = 'block';
             form.reset();
         } else {
-            alert('Error al enviar mensaje, intenta más tarde.');
+            formMessage.textContent = 'Error al enviar mensaje, intenta más tarde.';
+            formMessage.className = 'form-message error';
+            formMessage.style.display = 'block';
         }
+
     } catch (error) {
-        alert('Error al enviar mensaje, intenta más tarde.');
+        formMessage.textContent = 'Error al enviar mensaje, intenta más tarde.';
+        formMessage.className = 'form-message error';
+        formMessage.style.display = 'block';
         console.error(error);
     }
+
+    // Que desaparezca el mensaje después de 5 segundos
+    setTimeout(() => {
+        formMessage.style.display = 'none';
+    }, 5000);
 });
 </script>
 </body>

@@ -3,6 +3,7 @@ body {
     color: #fff;
     font-family: 'Poppins', sans-serif;
     overflow-x: hidden;
+    scroll-behavior: smooth;
 }
 
 .cursor {
@@ -137,6 +138,12 @@ body {
     background: rgba(220, 220, 220, 0.1);
     backdrop-filter: blur(10px);
     z-index: 1000;
+}
+
+.nav-link.active {
+    color: #ff9800 !important; /* naranja, cambiá por tu color */
+    font-weight: bold;
+    border-bottom: 2px solid #ff9800; /* opcional */
 }
 
 
@@ -354,6 +361,10 @@ body {
 @media (min-width: 992px) {
     .service-rect {
         flex-direction: row;
+    }
+    .service-desc {
+        max-width: 60%;   /* o 70% si querés más espacio */
+        white-space: normal; /* permite salto de línea */
     }
 }
 
@@ -750,5 +761,32 @@ body {
     .contact-btn {
         width: 100%;
         text-align: center;
+    }
+}
+
+.form-message {
+    display: none;         /* empieza oculto */
+    padding: 10px 15px;
+    margin-bottom: 15px;
+    border-radius: 5px;
+    font-weight: bold;
+    text-align: center;
+    transition: opacity 0.3s ease;
+}
+
+.form-message.success {
+    background-color: #4CAF50;
+    color: white;
+}
+
+.form-message.error {
+    background-color: #f44336;
+    color: white;
+}
+
+@media (max-width: 768px) {
+    .form-message {
+        font-size: 1rem;
+        padding: 12px 18px;
     }
 }
