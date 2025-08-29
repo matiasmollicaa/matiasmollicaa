@@ -10,13 +10,11 @@ html, body {
     background-size: cover;
 }
 
-/* Contenido encima del fondo */
 body > * {
     position: relative;
     z-index: 1;
 }
 
-/* Botones de categorías */
 .category-btn, .category-btn1, .category-btn2 {
     border: 2px solid #fff;
     padding: 0.5rem 1.5rem;
@@ -46,7 +44,6 @@ body > * {
     color: #0b0b0b;
 }
 
-/* Carrusel */
 .carousel-container {
     overflow: hidden;
     position: relative;
@@ -80,7 +77,6 @@ body > * {
     padding: 1.5rem;
 }
 
-/* Flechas */
 .arrow-btn {
     position: absolute;
     top: 50%;
@@ -105,13 +101,11 @@ body > * {
 .arrow-left { left: 10px; }
 .arrow-right { right: 10px; }
 
-/* Hover cards */
 .card:hover {
     transform: scale(1.05);
     box-shadow: 0 0 25px #f97316;
 }
 
-/* Responsive */
 @media (max-width: 1200px){
     .card { min-width: 350px; max-width: 350px; }
 }

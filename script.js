@@ -32,7 +32,7 @@ const navLinks = document.querySelectorAll(".nav-link");
 const navLinksCollapse = document.querySelectorAll(".navbar-collapse .nav-link");
 const navbarCollapse = document.querySelector(".navbar-collapse");
 
-// Sección activa según scroll
+// SECCION ACTIVA SEGUN SCROLL
 window.addEventListener("scroll", () => {
     let current = "";
 
@@ -52,7 +52,7 @@ window.addEventListener("scroll", () => {
     });
 });
 
-// Cerrar menú mobile al hacer clic
+// CERRAR MENÚ MOBILE CUANDO SE HACE CLICK
 navLinksCollapse.forEach(link => {
     link.addEventListener("click", () => {
         if (navbarCollapse.classList.contains("show")) {
@@ -102,7 +102,7 @@ gsap.registerPlugin(ScrollTrigger);
 // SCROLLTRIGGER / PARALLAX
 // =======================
 
-// Tecnologías
+// TECNOLOGÍAS
 document.querySelectorAll(".tech-card").forEach(card => {
     gsap.from(card, {
         opacity: 0,
@@ -118,7 +118,7 @@ document.querySelectorAll(".tech-card").forEach(card => {
     });
 });
 
-// Servicios expandibles
+// SERVICIOS 
 document.querySelectorAll(".service-rect").forEach(rect => {
     const desc = rect.querySelector(".service-desc");
     desc.textContent = rect.dataset.info;
@@ -134,11 +134,11 @@ document.querySelectorAll(".service-rect").forEach(rect => {
     });
 });
 
-// Contacto
+// CONTACTO
 gsap.from('.contact-info', { opacity: 0, x: -200, duration: 1.5, ease: 'power3.out' });
 gsap.from('.contact-form-container', { opacity: 0, x: 200, duration: 1.5, ease: 'power3.out' });
 
-// Parallax backgrounds
+// FONDO PARALLAX
 gsap.utils.toArray('.parallax-bg').forEach((el, index) => {
     gsap.to(el, {
         y: () => (index + 1) * 100,
@@ -152,7 +152,7 @@ gsap.utils.toArray('.parallax-bg').forEach((el, index) => {
     });
 });
 
-// Partículas
+// PARTÍCULAS
 document.querySelectorAll('.particle').forEach(particle => {
     const speed = particle.dataset.speed;
     gsap.to(particle, {
@@ -169,7 +169,7 @@ document.querySelectorAll('.particle').forEach(particle => {
     particle.style.left = Math.random() * window.innerWidth + "px";
 });
 
-// About parallax circles
+// CÍRCULOS PARALLAX SOBRE MI
 gsap.utils.toArray(".about-parallax .circle").forEach(circle => {
     let speed = circle.dataset.speed;
     gsap.to(circle, {
