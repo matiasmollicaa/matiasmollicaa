@@ -283,14 +283,8 @@ form.addEventListener('submit', async (e) => {
         message: form.message.value
     };
 
-    const res = await fetch('/api/send', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify(data)
-    });
-
     try {
-        const res = await fetch('https://matiasmollicaa.github.io/matiasmollicaa/send', {
+        const res = await fetch('/api/send', {  // <-- URL relativa
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify(data)
@@ -298,7 +292,7 @@ form.addEventListener('submit', async (e) => {
 
         const result = await res.json();
 
-        if(result.success){
+        if (result.success) {
             formMessage.textContent = 'Mensaje enviado correctamente!';
             formMessage.className = 'form-message success';
             formMessage.style.display = 'block';
@@ -316,7 +310,6 @@ form.addEventListener('submit', async (e) => {
         console.error(error);
     }
 
-    // Que desaparezca el mensaje después de 5 segundos
     setTimeout(() => {
         formMessage.style.display = 'none';
     }, 5000);
