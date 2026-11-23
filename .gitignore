@@ -1,1 +1,14 @@
 node_modules
+.nuxt
+.output
+.data
+.env
+.env.*
+.vercel
+referencias/
+docs/
+AGENTS.md
+PROJECT_CONTEXT.md
+public/media/sobre-mi/
+.DS_Store
+*.log
